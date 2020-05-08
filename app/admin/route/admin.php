@@ -21,3 +21,7 @@ Route::resource('resource','Resource');
 Route::group('zhushi',function(){
     Route::rule(':id','Zhushi/test');
 });
+
+Route::miss(function() {
+    return '404 Not Found!';
+});
