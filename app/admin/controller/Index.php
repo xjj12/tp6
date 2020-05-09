@@ -16,9 +16,9 @@ class Index extends BaseController
     public function index($id){
 //        Route::rule('test/:id','Index/index');
 //        echo app('http')->getName();
-
-        print_r($id);
-        print_r($this->request->param());
+        echo \think\facade\Route::buildUrl();
+//        print_r($id);
+//        print_r($this->request->param());
     }
 
     public function test(){
