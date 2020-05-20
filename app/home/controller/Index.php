@@ -2,7 +2,8 @@
 declare (strict_types = 1);
 
 namespace app\home\controller;
-use think\Db;
+
+use think\facade\Db;
 use think\Request;
 
 class Index
@@ -17,7 +18,9 @@ class Index
         return $this->request->method();
     }
     public function test(){
-        $list = Db::table('test')->where('id',1)->fund();
-        return json($list)->code(201);
+//        $data = ['name'=>'bbb','age'=>12];
+//        Db::name('test')->insert($data);
+        $list = Db::name('test')->select()->toArray();
+        print_r($list);
     }
 }
