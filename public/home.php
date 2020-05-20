@@ -5,6 +5,6 @@ require __DIR__ . '/../vendor/autoload.php';
 
 
 $http = (new  App())->http;
-$response = $http->name('home')->run();
+$response = $http->run();
 $response->send();
 $http->end($response);
